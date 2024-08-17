@@ -1,0 +1,45 @@
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.env
+.env
+
+# FastAPI
+instance/
+*.sqlite3
+*.db
+*.log
+
+# Logs
+logs/
+*.log
+*.out
+*.err
+
+# Virtual Environments
+venv/
+env/
+ENV/
+.venv/
+
+# Cache and backup files
+*.bak
+*.swp
+*~
+
+# IDEs
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Frontend
+node_modules/
+dist/
+build/
+coverage/
