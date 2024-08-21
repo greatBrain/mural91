@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    background-color: #159597;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.card h2>.btn{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.6em;
+    text-decoration: none;
+    color:#000;
+}
+
+.card .card-item{
+    max-width: 200px;
+    height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    margin: 8px;
+}
+
+.card .infoCards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card .infoCards .mondayCard{    
+    background-color: #45d6f0;       
+}
+
+.card .infoCards .tuesdayCard{    
+    background-color:#946124;    
+}
+
+.card .infoCards .wednesdayCard{    
+    background-color:#de5220;    
+}
+
+.card .infoCards .thursdayCard{    
+    background-color: #005f68;    
+}
+
+.card .infoCards .fridayCard{    
+    background-color: #1dff8c;    
+}
+
+.card .infoCards .saturdayCard{    
+    background-color: #f2ac81;    
+}
+
+.card .infoCards .sundayCard{    
+    background-color:#f5cf00;    
+}

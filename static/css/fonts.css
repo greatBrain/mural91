@@ -1,0 +1,52 @@
+/*Lato fonts*/
+@font-face{
+  font-family: "Lato-Light";
+  src: url('../fonts/Lato-Light.ttf');
+  font-weight: normal;
+  font-style: normal;  
+}
+
+@font-face{
+  font-family: "Lato-Thin";
+  src: url('../fonts/Lato-Thin.ttf');
+  font-weight: normal;
+  font-style: normal;  
+}
+/*End Lato*/
+
+/*Monserrat*/
+@font-face{
+  font-family: "Monserrat-Bold";
+  src: url('../fonts/MontserratBold.ttf');
+  font-weight: bold;  
+}
+
+@font-face{
+  font-family: "Monserrat-Regular";
+  src: url('../fonts/MontserratRegular.ttf');
+  font-weight: normal;  
+}
+/*End Monserrat*/
+
+/*Open Sans*/
+@font-face{
+  font-family: "OpenSans-Light";
+  src: url('../fonts/OpenSans-Light.ttf');
+  font-weight: normal;  
+  font-style: normal; 
+}
+
+@font-face{
+  font-family: "OpenSans-Regular";
+  src: url('../fonts/OpenSans-Regular.ttf');
+  font-weight: normal; 
+  font-style: normal; 
+}
+
+@font-face{
+  font-family: "OpenSans-Semibold";
+  src: url('../fonts/OpenSans-Semibold.ttf');
+  font-weight: normal; 
+  font-style: normal; 
+}
+/*End Open Sans*/
