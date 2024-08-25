@@ -5,11 +5,23 @@
 }
 
 html, body{
-    background-color: #159597;
+    background-image: url("temp-img.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     scroll-behavior: smooth;
     scrollbar-width: none;
 }
 
+nav{
+    background-color: #18191a;
+}
+.card-shadow{
+    -webkit-box-shadow: -6px 6px 25px -1px rgba(0,0,0,0.29);
+    -moz-box-shadow: -6px 6px 25px -1px rgba(0,0,0,0.29);
+    box-shadow: -6px 6px 25px -1px rgba(0,0,0,0.29);
+}
 .card h2>.btn{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.6em;
@@ -18,46 +30,75 @@ html, body{
 }
 
 .card .card-item{
-    max-width: 200px;
-    height: 200px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    scrollbar-width: none;
-    margin: 8px;
+    flex: 0 0 auto;
+    flex-direction: column;
+    width: 250px;
+    height: 150px;
+    margin-right: 15px;
+    margin-top: 10px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+.card .card-body{
+    display: flex;
+    overflow: hidden;
 }
 
 .card .infoCards{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
+    overflow-x: scroll;
+     scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
 }
 
-.card .infoCards .mondayCard{    
-    background-color: #45d6f0;       
+@media(width <768px){
+    .card .infoCards{
+        display: flex;
+        flex-wrap: nowrap;
+    }
 }
 
-.card .infoCards .tuesdayCard{    
-    background-color:#946124;    
+
+.card .infoCards .mondayCard{
+    background-color: #45d6f0;
+    border-radius: 3%;
 }
 
-.card .infoCards .wednesdayCard{    
-    background-color:#de5220;    
+.card .infoCards .tuesdayCard{
+    background-color:#946124;
+    border-radius: 3%;
 }
 
-.card .infoCards .thursdayCard{    
-    background-color: #005f68;    
+.card .infoCards .wednesdayCard{
+    background-color:#de5220;
+    border-radius: 3%;
 }
 
-.card .infoCards .fridayCard{    
-    background-color: #1dff8c;    
+.card .infoCards .thursdayCard{
+    background-color: #005f68;
+    border-radius: 3%;
 }
 
-.card .infoCards .saturdayCard{    
-    background-color: #f2ac81;    
+.card .infoCards .fridayCard{
+    background-color: #1dff8c;
+    border-radius: 3%;
 }
 
-.card .infoCards .sundayCard{    
-    background-color:#f5cf00;    
+.card .infoCards .saturdayCard{
+    background-color: #f2ac81;
+    border-radius: 3%;
+}
+
+.card .infoCards .sundayCard{
+    background-color:#f5cf00;
+    border-radius: 3%;
 }
