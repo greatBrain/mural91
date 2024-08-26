@@ -17,6 +17,13 @@ html, body{
 nav{
     background-color: #18191a;
 }
+
+.shadow-text{
+    text-shadow: 0px 1px 2px rgba(0,0,0,0.5),
+                 0px 8px 13px rgba(0,0,0,0.1),
+                 0px 5px 14px rgba(0,0,0,0.1);
+}
+
 .card-shadow{
     -webkit-box-shadow: -6px 6px 25px -1px rgba(0,0,0,0.29);
     -moz-box-shadow: -6px 6px 25px -1px rgba(0,0,0,0.29);
@@ -32,9 +39,8 @@ nav{
 .card .card-item{
     flex: 0 0 auto;
     flex-direction: column;
-    width: 250px;
-    height: 150px;
-    margin-right: 15px;
+    width: 235px;
+    height: 145px;
     margin-top: 10px;
     color: #fff;
     display: flex;
@@ -42,34 +48,40 @@ nav{
     align-items: center;
     font-size: 18px;
     border-radius: 8px;
+    border: 0.1px solid #b8b1b1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .card .card-body{
-    display: flex;
     overflow: hidden;
 }
 
 .card .infoCards{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
     overflow-x: scroll;
-     scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
 }
 
 @media(width <768px){
     .card .infoCards{
         display: flex;
+        justify-content: space-between;
         flex-wrap: nowrap;
+    }
+
+    .card .card-item{
+        margin-top: 10px;
+        margin-right: 10px;
     }
 }
 
 
 .card .infoCards .mondayCard{
-    background-color: #45d6f0;
+    background-color: #47bcd1;
     border-radius: 3%;
 }
 
@@ -89,7 +101,7 @@ nav{
 }
 
 .card .infoCards .fridayCard{
-    background-color: #1dff8c;
+    background-color: #0fb962;
     border-radius: 3%;
 }
 
@@ -99,6 +111,6 @@ nav{
 }
 
 .card .infoCards .sundayCard{
-    background-color:#f5cf00;
+    background-color:#d8b915;
     border-radius: 3%;
 }
