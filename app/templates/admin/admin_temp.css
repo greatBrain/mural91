@@ -1,0 +1,96 @@
+:root{
+    --purple:#8041F2;
+    --blue-gray: #3095ED;
+    --blue: #2d7eff;
+    --gray: #2b2d30;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+nav{
+    background-color: #18191a;
+    z-index: 1;
+}
+
+nav a{
+    padding-left:10px;
+}
+
+html, body{
+    height: 100%;
+    background-color: #cfe0e0;
+    background-image: url("church.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Negro con 70% de opacidad */
+    height: auto;
+}
+
+#login-form-container{
+    margin-top: 3%;
+}
+
+#login-form{
+    height: 450px;
+    background-color: #fff;
+    padding: 5%;
+    z-index: 1;
+}
+
+input[type=text]{
+    border: 1px solid #3e92d2;
+    padding: 15px;
+}
+
+input[type=password]{
+    border: 1px solid #3e92d2;
+    padding: 15px;
+}
+
+input:focus{
+    border: 1px solid #4e8741;
+}
+
+.btn-login {
+    width: 100%;
+	color: white;
+    background: rgb(48,109,193);
+    background: linear-gradient(90deg, rgba(48,109,193,1) 0%, rgba(92,144,237,1) 0%, rgba(11,137,177,1) 39%, rgba(31,82,190,1) 89%);
+	border-radius: 8px;
+	transition: .2s ease-in-out;
+	padding: 10px 15px;
+	font-weight: 600;
+	border: none;
+}
+
+.btn-login:hover {
+	border-radius: 30px;
+}
+
+@media(width <=768px){
+    #login-form{
+        height: 480px;
+        padding: 8%;
+        margin-top: 8%;
+    }
+
+    form{
+        padding-top: 10%;
+    }
+}
