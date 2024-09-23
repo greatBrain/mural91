@@ -1,6 +1,5 @@
 from fastapi import FastAPI
-from fastapi.staticfiles import StaticFiles
-from fastapi.templating import Jinja2Templates
+from starlette.requests import Request
 from routes.activity_routers import router as activity_router
 from db.database import Base, engine
 
@@ -8,18 +7,20 @@ Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
-app.mount("/static", StaticFiles(directory="static"), name="static")
-templates = Jinja2Templates(directory="templates")
-
 # User routers:
-app.include_router(activity_router, prefix="/mural", tags=["Activities"])
 app.include_router(activity_router, prefix="/actividades/nueva", tags=["Add new activities"])
 
-# Admin routers:
 
+# Response for users:
 @app.get("/")
-def root():
-    return {"Message":"Mural actividades Salmo 91"}
+def root(request: Request):
+    return app.include_router(activity_router, prefix="/mural", tags=["Activities"])
+
+# Response just for admins:
+'''@app.get("/mural/panel")
+def root_admin(request: Request):
+    return templates.TemplateResponse("admin/login.html", {"request":request})'''
+
 
 if __name__=="__main__":
    import uvicorn
