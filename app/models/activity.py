@@ -7,7 +7,7 @@ class Activity(Base):
     id = Column(Integer, primary_key=True, index=True)
     title = Column(String(length=45), index=True, nullable=False)
     description = Column(Text, nullable=True)
-    created_at = Column(DateTime, server_default = func.now(), nulleable = False)
+    created_at = Column(DateTime, server_default = func.now())
 
     def __repr__(self):
         return "<Activity(id={}, title={}, description={}, created_at={})>".format(self.id, self.title, 
