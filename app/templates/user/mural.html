@@ -1,277 +1,219 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Mural de actividades</title>
 
-        <!-- A SER CAMBIADA A LOS ARCHIVOS EN LOCAL-->
-        <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        />
-        <link rel="stylesheet" type="text/css" href="temp.css" />
-    </head>
-    <body>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-dark">
-                <a class="navbar-brand pt-2" href="#">
-                    <h4>Mural <span class="text-info">Salmo 91</h4></span>
-                </a>
-            </nav>
-        </header>
-        <main>
-            <section class="activities mb-5">
-                <div class="container mt-5 rounded">
-                    <h5 class="text-left text-white">
-                        Eventos de esta semana
-                    </h5>
-                    <div class="accordion shadow-lg" id="accordionExample">
-                        <!-- Lunes -->
-                        <div class="card pt-3">
-                            <div class="card-header pressed" id="headingMonday">
-                                <h2 class="mb-0">
-                                    <button
-                                        class="btn btn-link"
-                                        type="button"
-                                        data-toggle="collapse"
-                                        data-target="#collapseMonday"
-                                        aria-expanded="true"
-                                        aria-controls="collapseMonday"
-                                    >
-                                        Lunes
-                                    </button>
-                                </h2>
-                            </div>
-                            <div
-                                id="collapseMonday"
-                                class="collapse"
-                                aria-labelledby="headingMonday"
-                                data-parent="#accordionExample"
-                            >
-                                <div class="card-body">
-                                    <div class="infoCards monday"> <!--  card-shadow-->
-                                        <div class="card-item mondayCard">
-                                            <h4 class="eventTitle text-center pt-3 shadow-text" id="monday-event-tile">Item prueba</h4>
-                                            <p class="eventDescription shadow-text" id="event-description"></p>
-                                            <p class="eventTime shadow-text" id="event-time">Hora: 08:00 P.M</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mural de actividades</title>
+
+    <!-- A SER CAMBIADA A LOS ARCHIVOS EN LOCAL-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/mural.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand pt-2" href="#">
+                <h4>Mural <span class="text-info">Salmo 91</h4></span>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <section class="activities mb-5">
+            <div class="container mt-5 rounded">
+                <h5 class="text-left text-white title">
+                    Eventos de esta semana
+                </h5>
+                <div class="accordion shadow-lg" id="accordionExample">
+                    <!-- Lunes -->
+                    <div class="card pt-3">
+                        <div class="card-header pressed" id="headingMonday">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                    data-target="#collapseMonday" aria-expanded="true" aria-controls="collapseMonday">
+                                    Lunes
+                                </button>
+                            </h2>
                         </div>
-
-                        <!-- Martes -->
-                        <div class="card">
-                            <div class="card-header pressed" id="headingTuesday">
-                                <h2 class="mb-0">
-                                    <button
-                                        class="btn btn-link collapsed"
-                                        type="button"
-                                        data-toggle="collapse"
-                                        data-target="#collapseTuesday"
-                                        aria-expanded="false"
-                                        aria-controls="collapseTuesday"
-                                    >
-                                        Martes
-                                    </button>
-                                </h2>
-                            </div>
-                            <div
-                                id="collapseTuesday"
-                                class="collapse"
-                                aria-labelledby="headingTuesday"
-                                data-parent="#accordionExample"
-                            >
-                                <div class="card-body">
-                                    <div class="infoCards tuesday">
-                                        <div class="card-item tuesdayCard">
-                                            <h4 class="eventTitle text-center pt-3 shadow-text" id="tuesday-event-tile">Item prueba</h4>
-                                            <p class="eventDescription shadow-text" id="event-description"></p>
-                                            <p class="eventTime shadow-text" id="event-time">Hora: 08:00 P.M</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Miércoles -->
-                        <div class="card">
-                            <div class="card-header pressed" id="headingWednesday">
-                                <h2 class="mb-0">
-                                    <button
-                                        class="btn btn-link collapsed"
-                                        type="button"
-                                        data-toggle="collapse"
-                                        data-target="#collapseWednesday"
-                                        aria-expanded="false"
-                                        aria-controls="collapseWednesday"
-                                    >
-                                        Miércoles
-                                    </button>
-                                </h2>
-                            </div>
-                            <div
-                                id="collapseWednesday"
-                                class="collapse"
-                                aria-labelledby="headingWednesday"
-                                data-parent="#accordionExample"
-                            >
-                                <div class="card-body">
-                                    <div class="infoCards wednesday">
-                                        <div class="card-item wednesdayCard">
-                                            <h4 class="eventTitle text-center pt-3 shadow-text" id="wednesday-event-tile">Item prueba</h4>
-                                            <p class="eventDescription shadow-text" id="event-description"></p>
-                                            <p class="eventTime shadow-text" id="event-time">Hora: 08:00 P.M</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Jueves -->
-                        <div class="card">
-                            <div class="card-header pressed" id="headingThursday">
-                                <h2 class="mb-0">
-                                    <button
-                                        class="btn btn-link collapsed"
-                                        type="button"
-                                        data-toggle="collapse"
-                                        data-target="#collapseThursday"
-                                        aria-expanded="false"
-                                        aria-controls="collapseThursday"
-                                    >
-                                        Jueves
-                                    </button>
-                                </h2>
-                            </div>
-                            <div
-                                id="collapseThursday"
-                                class="collapse"
-                                aria-labelledby="headingThursday"
-                                data-parent="#accordionExample"
-                            >
-                                <div class="card-body">
-                                    <div class="infoCards thursday">
-                                        <div class="card-item thursdayCard">
-                                            <h4 class="eventTitle text-center pt-3 shadow-text" id="thursday-event-tile">Item prueba</h4>
-                                            <p class="eventDescription shadow-text" id="event-description"></p>
-                                            <p class="eventTime shadow-text" id="event-time">Hora: 08:00 P.M</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Viernes -->
-                        <div class="card">
-                            <div class="card-header pressed" id="headingFriday">
-                                <h2 class="mb-0">
-                                    <button
-                                        class="btn btn-link collapsed"
-                                        type="button"
-                                        data-toggle="collapse"
-                                        data-target="#collapseFriday"
-                                        aria-expanded="false"
-                                        aria-controls="collapseFriday"
-                                    >
-                                        Viernes
-                                    </button>
-                                </h2>
-                            </div>
-                            <div
-                                id="collapseFriday"
-                                class="collapse"
-                                aria-labelledby="headingFriday"
-                                data-parent="#accordionExample"
-                            >
-                                <div class="card-body">
-                                    <div class="infoCards friday">
-                                        <div class="card-item fridayCard">
-                                            <h4 class="eventTitle text-center pt-3 shadow-text" id="friday-event-tile">Item prueba</h4>
-                                            <p class="eventDescription shadow-text" id="event-description"></p>
-                                            <p class="eventTime shadow-text" id="event-time">Hora: 08:00 P.M</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Sábado -->
-                        <div class="card">
-                            <div class="card-header pressed" id="headingSaturday">
-                                <h2 class="mb-0">
-                                    <button
-                                        class="btn btn-link collapsed"
-                                        type="button"
-                                        data-toggle="collapse"
-                                        data-target="#collapseSaturday"
-                                        aria-expanded="false"
-                                        aria-controls="collapseSaturday"
-                                    >
-                                        Sábado
-                                    </button>
-                                </h2>
-                            </div>
-                            <div
-                                id="collapseSaturday"
-                                class="collapse"
-                                aria-labelledby="headingSaturday"
-                                data-parent="#accordionExample"
-                            >
-                                <div class="card-body">
-                                    <div class="infoCards saturday">
-                                        <div class="card-item saturdayCard">
-                                            <h4 class="eventTitle text-center pt-3 shadow-text" id="saturday-event-tile">Item prueba</h4>
-                                            <p class="eventDescription shadow-text" id="event-description"></p>
-                                            <p class="eventTime shadow-text" id="event-time">Hora: 08:00 P.M</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Domingo -->
-                        <div class="card pb-0">
-                            <div class="card-header pressed" id="headingSunday">
-                                <h2 class="mb-0">
-                                    <button
-                                        class="btn btn-link collapsed"
-                                        type="button"
-                                        data-toggle="collapse"
-                                        data-target="#collapseSunday"
-                                        aria-expanded="false"
-                                        aria-controls="collapseSunday">
-                                        Domingo
-                                    </button>
-                                </h2>
-                            </div>
-                            <div
-                                id="collapseSunday"
-                                class="collapse"
-                                aria-labelledby="headingSunday"
-                                data-parent="#accordionExample"
-                            >
-                                <div class="card-body">
-                                    <div class="infoCards sunday">
-                                        <div class="card-item sundayCard">
-                                            <h4 class="eventTitle text-center pt-3 shadow-text" id="sunday-event-tile">Item prueba</h4>
-                                            <p class="eventDescription shadow-text" id="event-description"></p>
-                                            <p class="eventTime shadow-text" id="event-time">Hora: 08:00 P.M</p>
-                                        </div>
+                        <div id="collapseMonday" class="collapse" aria-labelledby="headingMonday"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="infoCards monday"> <!--  card-shadow-->
+                                    <div class="card-item mondayCard">
+                                        <h4 class="eventTitle text-center pt-3 shadow-text" id="monday-event-tile">Item
+                                            prueba</h4>
+                                        <p class="eventDescription shadow-text" id="event-description"></p>
+                                        <p class="eventTime shadow-text" id="event-time">Hora: 08:00 P.M</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- /.accordion -->
-                </div>
-                <!-- /.container -->
-            </section>
-        </main>
 
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    </body>
+                    <!-- Martes -->
+                    <div class="card">
+                        <div class="card-header pressed" id="headingTuesday">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseTuesday" aria-expanded="false"
+                                    aria-controls="collapseTuesday">
+                                    Martes
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTuesday" class="collapse" aria-labelledby="headingTuesday"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="infoCards tuesday">
+                                    <div class="card-item tuesdayCard">
+                                        <h4 class="eventTitle text-center pt-3 shadow-text" id="tuesday-event-tile">Item
+                                            prueba</h4>
+                                        <p class="eventDescription shadow-text" id="event-description"></p>
+                                        <p class="eventTime shadow-text" id="event-time">Hora: 08:00 P.M</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Miércoles -->
+                    <div class="card">
+                        <div class="card-header pressed" id="headingWednesday">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseWednesday" aria-expanded="false"
+                                    aria-controls="collapseWednesday">
+                                    Miércoles
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseWednesday" class="collapse" aria-labelledby="headingWednesday"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="infoCards wednesday">
+                                    <div class="card-item wednesdayCard">
+                                        <h4 class="eventTitle text-center pt-3 shadow-text" id="wednesday-event-tile">
+                                            Item prueba</h4>
+                                        <p class="eventDescription shadow-text" id="event-description"></p>
+                                        <p class="eventTime shadow-text" id="event-time">Hora: 08:00 P.M</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Jueves -->
+                    <div class="card">
+                        <div class="card-header pressed" id="headingThursday">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseThursday" aria-expanded="false"
+                                    aria-controls="collapseThursday">
+                                    Jueves
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThursday" class="collapse" aria-labelledby="headingThursday"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="infoCards thursday">
+                                    <div class="card-item thursdayCard">
+                                        <h4 class="eventTitle text-center pt-3 shadow-text" id="thursday-event-tile">
+                                            Item prueba</h4>
+                                        <p class="eventDescription shadow-text" id="event-description"></p>
+                                        <p class="eventTime shadow-text" id="event-time">Hora: 08:00 P.M</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Viernes -->
+                    <div class="card">
+                        <div class="card-header pressed" id="headingFriday">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseFriday" aria-expanded="false" aria-controls="collapseFriday">
+                                    Viernes
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFriday" class="collapse" aria-labelledby="headingFriday"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="infoCards friday">
+                                    <div class="card-item fridayCard">
+                                        <h4 class="eventTitle text-center pt-3 shadow-text" id="friday-event-tile">Item
+                                            prueba</h4>
+                                        <p class="eventDescription shadow-text" id="event-description"></p>
+                                        <p class="eventTime shadow-text" id="event-time">Hora: 08:00 P.M</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sábado -->
+                    <div class="card">
+                        <div class="card-header pressed" id="headingSaturday">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseSaturday" aria-expanded="false"
+                                    aria-controls="collapseSaturday">
+                                    Sábado
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseSaturday" class="collapse" aria-labelledby="headingSaturday"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="infoCards saturday">
+                                    <div class="card-item saturdayCard">
+                                        <h4 class="eventTitle text-center pt-3 shadow-text" id="saturday-event-tile">
+                                            Item prueba</h4>
+                                        <p class="eventDescription shadow-text" id="event-description"></p>
+                                        <p class="eventTime shadow-text" id="event-time">Hora: 08:00 P.M</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Domingo -->
+                    <div class="card pb-0">
+                        <div class="card-header pressed" id="headingSunday">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseSunday" aria-expanded="false" aria-controls="collapseSunday">
+                                    Domingo
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseSunday" class="collapse" aria-labelledby="headingSunday"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="infoCards sunday">
+                                    <div class="card-item sundayCard">
+                                        <h4 class="eventTitle text-center pt-3 shadow-text" id="sunday-event-tile">Item
+                                            prueba</h4>
+                                        <p class="eventDescription shadow-text" id="event-description"></p>
+                                        <p class="eventTime shadow-text" id="event-time">Hora: 08:00 P.M</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.accordion -->
+            </div>
+            <!-- /.container -->
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
 </html>
