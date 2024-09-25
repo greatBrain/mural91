@@ -3,18 +3,14 @@ from datetime import time, datetime
 from typing import Optional
 
 class ActivityBase(BaseModel):
-    # title: str = Field(..., max_length=45, description="The title of the activity")
-    # description: Optional[str] = Field(None, description="A brief description of the activity")
-    # activity_time: time = Field(..., description="The time associated with the activity", nullable=False)
+    title: str = Field(..., max_length=45, description="The title of the activity")
+    description: Optional[str] = Field(None, description="A brief description of the activity")
+    activity_time: time = Field(..., description="The time associated with the activity")
 
-    title: str
-    description: Optional[str]
-    activity_time: time
-
-class ActivityCreate(ActivityBase):    
+class ActivityCreate(ActivityBase):
     pass
 
-class ActivityEdit(ActivityBase):    
+class ActivityEdit(ActivityBase):
     id: int = Field(...)
 
 class ActivityResponse(ActivityBase):

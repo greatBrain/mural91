@@ -19,6 +19,13 @@ nav {
     background-color: #18191a;
 }
 
+nav img{
+    max-width: 55px;
+    transform: rotate(8deg);
+    padding: 8px;
+    margin-top: -15px;
+}
+
 .shadow-text {
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5),
         0px 8px 13px rgba(0, 0, 0, 0.1),
@@ -46,8 +53,6 @@ nav {
     transform: scale(0.99);
 }
 
-
-
 .card-shadow {
     -webkit-box-shadow: -6px 6px 25px -1px rgba(0, 0, 0, 0.29);
     -moz-box-shadow: -6px 6px 25px -1px rgba(0, 0, 0, 0.29);
@@ -65,7 +70,7 @@ nav {
     flex: 0 0 auto;
     flex-direction: column;
     width: 235px;
-    height: 250px;
+    height: 280px;
     margin-top: 10px;
     color: #fff;
     display: flex;
@@ -98,6 +103,17 @@ nav {
         background-image: url("/static/img/bible-movil.jpg");
         background-position: center center;
         background-size: cover;
+    }
+
+    nav{
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+        top: 0;
+    }
+
+    .navbar{
+        display: inline-block;
     }
 
     .card .infoCards {
