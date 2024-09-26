@@ -19,7 +19,7 @@ nav {
     background-color: #18191a;
 }
 
-nav img{
+nav img {
     max-width: 55px;
     transform: rotate(8deg);
     padding: 8px;
@@ -69,8 +69,8 @@ nav img{
 .card .card-item {
     flex: 0 0 auto;
     flex-direction: column;
-    width: 235px;
-    height: 280px;
+    width: 300px;
+    height: 198px;
     margin-top: 10px;
     color: #fff;
     display: flex;
@@ -105,14 +105,14 @@ nav img{
         background-size: cover;
     }
 
-    nav{
+    nav {
         position: fixed;
         width: 100%;
         z-index: 1;
         top: 0;
     }
 
-    .navbar{
+    .navbar {
         display: inline-block;
     }
 
@@ -134,35 +134,35 @@ nav img{
 
 .card .infoCards .mondayCard {
     background-color: #47bcd1;
-    border-radius: 3%;
+    border-radius: 7%;
 }
 
 .card .infoCards .tuesdayCard {
     background-color: #946124;
-    border-radius: 3%;
+    border-radius: 7%;
 }
 
 .card .infoCards .wednesdayCard {
     background-color: #de5220;
-    border-radius: 3%;
+    border-radius: 7%;
 }
 
 .card .infoCards .thursdayCard {
     background-color: #005f68;
-    border-radius: 3%;
+    border-radius: 7%;
 }
 
 .card .infoCards .fridayCard {
     background-color: #0fb962;
-    border-radius: 3%;
+    border-radius: 7%;
 }
 
 .card .infoCards .saturdayCard {
     background-color: #f2ac81;
-    border-radius: 3%;
+    border-radius: 7%;
 }
 
 .card .infoCards .sundayCard {
     background-color: #d8b915;
-    border-radius: 3%;
+    border-radius: 7%;
 }
