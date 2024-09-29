@@ -38,16 +38,26 @@
                                 </button>
                             </h2>
                         </div>
+
                         <div id="collapseMonday" class="collapse" aria-labelledby="headingMonday"
                             data-parent="#accordionExample">
                             <div class="card-body">
-                                <div class="infoCards monday"> <!--  card-shadow-->
+                                <div class="infoCards monday">
+
+                                    {% for activity in activities %}
                                     <div class="card-item mondayCard">
-                                        <h4 class="eventTitle text-center pt-3 shadow-text" id="monday-event-tile">Item
-                                            prueba</h4>
-                                        <p class="eventDescription shadow-text" id="event-description"></p>
-                                        <p class="eventTime shadow-text" id="event-time">Hora: 08:00 P.M</p>
+                                        <h4 class="eventTitle text-center pt-3 shadow-text" id="monday-event-tile">
+                                            {{ activity.title }}
+                                        </h4>
+                                        <p class="eventDescription shadow-text" id="event-description">
+                                            {{ activity.description }}
+                                        </p>
+                                        <p class="eventTime shadow-text" id="event-time">
+                                            {{ activity.activity_time }}
+                                        </p>
                                     </div>
+                                    {% endfor %}
+
                                 </div>
                             </div>
                         </div>

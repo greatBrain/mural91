@@ -67,10 +67,11 @@ nav img {
 }
 
 .card .card-item {
+    margin: 8px;
     flex: 0 0 auto;
     flex-direction: column;
-    width: 300px;
-    height: 198px;
+    width: 260px;
+    height: 200px;
     margin-top: 10px;
     color: #fff;
     display: flex;
@@ -89,7 +90,7 @@ nav img {
 .card .infoCards {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
     overflow-x: scroll;
