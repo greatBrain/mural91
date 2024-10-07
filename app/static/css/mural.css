@@ -101,7 +101,7 @@ nav img {
 
     html,
     body {
-        background-image: url("/static/img/bible-movil.jpg");
+        background-image: url("/static/img/aqua.jpeg");
         background-position: center center;
         background-size: cover;
     }
@@ -115,6 +115,15 @@ nav img {
 
     .navbar {
         display: inline-block;
+    }
+
+    .card{
+       margin-bottom: 12px;
+       border-radius: 5%;
+       box-shadow: -4px 2px 31px -9px rgba(0,0,0,0.58);
+       text-align:center;
+       -webkit-box-shadow: -4px 2px 31px -9px rgba(0,0,0,0.58);
+       -moz-box-shadow: -4px 2px 31px -9px rgba(0,0,0,0.58);
     }
 
     .card .infoCards {
