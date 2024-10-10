@@ -1,21 +1,3 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-html,
-body {
-    /*background-image: url("/static/img/bible-desktop.jpg");*/
-    background-image: linear-gradient(to right top, #abb2a2, #a0b29a, #90b396, #7bb496, #5fb59a, #50b69d, #3eb6a1, #20b7a6, #28b8a5, #2fb9a5, #35baa4, #3bbba4);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    scroll-behavior: smooth;
-    scrollbar-width: none
-}
-
 nav {
     background-color: #18191a;
 }

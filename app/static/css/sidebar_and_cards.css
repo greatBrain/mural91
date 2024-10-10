@@ -1,0 +1,57 @@
+.sidebar-and-cards-container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    background-color: #00FFFF; /* Azul aqua */
+    color: #fff;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li:hover {
+    background-color: #008B8B; /* Color más oscuro al pasar el cursor */
+}
+
+/* Main content */
+.days-cards-content {
+    margin-left: 250px; /* Espacio reservado para el sidebar */
+    width: calc(100% - 250px);
+    background-color: #f4f4f4;
+    height: 100vh;
+    overflow-x: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Estilos responsivos para móviles y tablets */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px; /* Sidebar más estrecho en pantallas pequeñas */
+    }
+
+    .days-cards-content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+}

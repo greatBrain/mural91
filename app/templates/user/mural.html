@@ -10,6 +10,7 @@
     <!-- A SER CAMBIADA A LOS ARCHIVOS EN LOCAL-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/static/css/mural.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/sidebar_and_cards.css" />
 </head>
 
 <body>
@@ -22,11 +23,33 @@
         </nav>
     </header>
     <main>
+
         <section class="activities mb-5">
-            <div class="container mt-5 rounded">
+
+            <div class="container" id="sidebar-and-cards-container">
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <ul class="days-list">
+                        <li>Lunes</li>
+                        <li>Martes</li>
+                        <li>Miércoles</li>
+                        <li>Jueves</li>
+                        <li>Viernes</li>
+                        <li>Sábado</li>
+                        <li>Domingo</li>
+                    </ul>
+                </div>
+
+                <div class="days-cards-content">
+                    <!-- Aquí irían las cards de eventos -->
+                </div>
+            </div>
+
+            <!-- Container old design-->
+            <!--<div class="container mt-5 rounded">
                 <div class="accordion shadow-lg" id="accordionExample">
 
-                    <!-- Cards de eventos -->
+
                     <div class="card pt-3">
                         <div class="card-header pressed" id="headingEvents">
                             <h2 class="mb-0" class="text-center">
@@ -62,9 +85,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- /.accordion -->
             </div>
-            <!-- /.container -->
+            <!-- /.container old design-->
         </section>
     </main>
 
