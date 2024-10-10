@@ -117,13 +117,13 @@ nav img {
         display: inline-block;
     }
 
-    .card{
-       margin-bottom: 12px;
-       border-radius: 5%;
-       box-shadow: -4px 2px 31px -9px rgba(0,0,0,0.58);
-       text-align:center;
-       -webkit-box-shadow: -4px 2px 31px -9px rgba(0,0,0,0.58);
-       -moz-box-shadow: -4px 2px 31px -9px rgba(0,0,0,0.58);
+    .card {
+        margin-bottom: 12px;
+        border-radius: 5%;
+        box-shadow: -4px 2px 31px -9px rgba(0, 0, 0, 0.58);
+        text-align: center;
+        -webkit-box-shadow: -4px 2px 31px -9px rgba(0, 0, 0, 0.58);
+        -moz-box-shadow: -4px 2px 31px -9px rgba(0, 0, 0, 0.58);
     }
 
     .card .infoCards {
@@ -142,12 +142,12 @@ nav img {
     }
 }
 
-.card .infoCards .mondayCard {
+.card .infoCards .eventCard {
     background-color: #47bcd1;
     border-radius: 7%;
 }
 
-.card .infoCards .tuesdayCard {
+/* .card .infoCards .tuesdayCard {
     background-color: #946124;
     border-radius: 7%;
 }
@@ -175,4 +175,4 @@ nav img {
 .card .infoCards .sundayCard {
     background-color: #d8b915;
     border-radius: 7%;
-}
+} */

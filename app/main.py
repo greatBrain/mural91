@@ -4,7 +4,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from db.database import Base, engine, get_db
 from models.activity import ActivityDataModel
-from collections import defaultdict
+
 
 from fastapi import HTTPException, status, Depends
 from datetime import datetime
@@ -21,12 +21,12 @@ templates = Jinja2Templates(directory="templates")
 @app.get("/")
 async def get_mural(request: Request, session: Session = Depends(get_db)):
     activities = session.query(ActivityDataModel).all()
-    activities_by_day = defaultdict(list)
+    activities_list = []
 
     # Filtering activities by days:
     for activity in activities:
-        activities_by_day[activity.day].append(activity)
-    return templates.TemplateResponse("user/mural.html", {"request": request, "activities_by_day": activities_by_day})
+        activities_list.append(activity)
+    return templates.TemplateResponse("user/mural.html", {"request": request, "activities_list": activities_list})
 
 
 
