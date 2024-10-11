@@ -1,3 +1,10 @@
+html,body{
+  background-image: linear-gradient(to right top, #b3b7af, #a5b3a2, #93b199, #7bae94, #5eab93, #50ab96, #3dac99, #21ac9d, #29b1a0, #30b6a3, #37bba6, #3dc0a9);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 nav {
     background-color: #18191a;
 }

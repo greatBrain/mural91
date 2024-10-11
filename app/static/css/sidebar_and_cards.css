@@ -4,15 +4,16 @@
 }
 
 .sidebar {
-    background-color: #00FFFF; /* Azul aqua */
+    background-color: #333939;
     color: #fff;
-    width: 250px;
+    width: 125px;
     height: 100%;
     position: fixed;
     top: 0;
     left: 0;
     display: flex;
     flex-direction: column;
+    z-index: -1;
 }
 
 .sidebar ul {
