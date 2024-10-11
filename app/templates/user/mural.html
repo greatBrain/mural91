@@ -10,6 +10,7 @@
     <!-- A SER CAMBIADA A LOS ARCHIVOS EN LOCAL-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/static/css/mural.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/fonts.css" />
     <link rel="stylesheet" type="text/css" href="/static/css/sidebar_and_cards.css" />
 </head>
 
@@ -26,7 +27,7 @@
 
         <section class="activities mb-5">
             <div class="container" id="sidebar-and-cards-container">
-                <div class="sidebar">
+                <div class="sidebar box_shadow">
                     <ul class="days-list">
                         <li>Lunes</li>
                         <li>Martes</li>
@@ -38,52 +39,26 @@
                     </ul>
                 </div>
 
-                <div class="days-cards-content">
-                </div>
-            </div>
+                <div class="days-cards-content box_shadow">
+                    <div class="row title">
+                        <h3>Actividades de la semana</h3>
+                    </div>
 
-            <!-- Container old design-->
-            <!--<div class="container mt-5 rounded">
-                <div class="accordion shadow-lg" id="accordionExample">
+                    <div class="cards">
+                        <div class="card-item">
+                            <div class="activity-title">
+                                <h5>Servicio de prueba</h5>
+                            </div>
 
-
-                    <div class="card pt-3">
-                        <div class="card-header pressed" id="headingEvents">
-                            <h2 class="mb-0" class="text-center">
-                                <button class="btn btn-link" type="button" data-toggle="collapse"
-                                    data-target="#collapseEventsCards" aria-expanded="true"
-                                    aria-controls="collapseEventsCards">
-                                    Eventos de esta semana
-                                </button>
-                            </h2>
-                        </div>
-
-                        <div id="collapseEventsCards" class="collapse" aria-labelledby="headingEvents"
-                            data-parent="#accordionExample">
                             <div class="card-body">
-                                <div class="infoCards weekly">
-
-                                    {% for activity in activities_list %}
-                                    <div class="card-item eventCard" id="{{ activity.day }}">
-                                        <h4 class="eventTitle text-center pt-3 shadow-text" id="event-tile">
-                                            {{ activity.title}}
-                                        </h4>
-                                        <p class="eventDescription shadow-text" id="event-description">
-                                            {{ activity.description }}
-                                        </p>
-                                        <p class="eventTime shadow-text" id="event-time">
-                                            {{ activity.day }}
-                                        </p>
-                                    </div>
-                                    {% endfor %}
-
-                                </div>
+                                <p>
+                                    Esta es una prueba de una de las cards.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- /.container old design-->
         </section>
     </main>
 

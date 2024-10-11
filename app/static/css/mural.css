@@ -43,50 +43,6 @@ nav img {
     transform: scale(0.99);
 }
 
-.card-shadow {
-    -webkit-box-shadow: -6px 6px 25px -1px rgba(0, 0, 0, 0.29);
-    -moz-box-shadow: -6px 6px 25px -1px rgba(0, 0, 0, 0.29);
-    box-shadow: -6px 6px 25px -1px rgba(0, 0, 0, 0.29);
-}
-
-.card h2>.btn {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.6em;
-    text-decoration: none;
-    color: #000;
-}
-
-.card .card-item {
-    margin: 8px;
-    flex: 0 0 auto;
-    flex-direction: column;
-    width: 260px;
-    height: 200px;
-    margin-top: 10px;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    border-radius: 8px;
-    border: 0.1px solid #b8b1b1;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.card .card-body {
-    overflow: hidden;
-}
-
-.card .infoCards {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    overflow-x: scroll;
-    scrollbar-width: none;
-}
-
 @media(width <768px) {
     nav {
         position: fixed;
@@ -97,30 +53,6 @@ nav img {
 
     .navbar {
         display: inline-block;
-    }
-
-    .card {
-        margin-bottom: 12px;
-        border-radius: 5%;
-        box-shadow: -4px 2px 31px -9px rgba(0, 0, 0, 0.58);
-        text-align: center;
-        -webkit-box-shadow: -4px 2px 31px -9px rgba(0, 0, 0, 0.58);
-        -moz-box-shadow: -4px 2px 31px -9px rgba(0, 0, 0, 0.58);
-    }
-
-    .card .infoCards {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-    }
-
-    .card .card-item {
-        margin-top: 10px;
-        margin-right: 10px;
-    }
-
-    .title {
-        text-shadow: -1px 4px 7px rgba(0, 0, 0, 0.9);
     }
 }
 

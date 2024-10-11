@@ -1,28 +1,39 @@
-.sidebar-and-cards-container {
+.box_shadow{
+    box-shadow: -4px 23px 93px 1px rgba(0,0,0,0.33);
+    -webkit-box-shadow: -4px 23px 93px 1px rgba(0,0,0,0.33);
+    -moz-box-shadow: -4px 23px 93px 1px rgba(0,0,0,0.33);
+}
+
+#sidebar-and-cards-container {
     display: flex;
+    flex-direction: row;
     width: 100%;
+    margin-top: 5%;
 }
 
 .sidebar {
-    background-color: #333939;
+    /*background-color: #333939;*/
+    background: rgba( 16, 165, 225, 0.8 );
+    backdrop-filter: blur( 7.5px );
+    -webkit-backdrop-filter: blur( 7.5px );
+
+    border-radius: 10px 0px 0px 10px;
     color: #fff;
     width: 125px;
-    height: 100%;
-    position: fixed;
-    top: 0;
+    height: 68vh;
     left: 0;
     display: flex;
     flex-direction: column;
-    z-index: -1;
 }
 
 .sidebar ul {
     list-style-type: none;
     padding: 0;
+    margin-top: 51.5%;
 }
 
 .sidebar ul li {
-    padding: 15px 20px;
+    padding: 23.5px 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     cursor: pointer;
     transition: background-color 0.3s;
@@ -34,25 +45,79 @@
 
 /* Main content */
 .days-cards-content {
-    margin-left: 250px; /* Espacio reservado para el sidebar */
-    width: calc(100% - 250px);
-    background-color: #f4f4f4;
-    height: 100vh;
+    margin-left: 0; /* Espacio reservado para el sidebar */
+    width:100%;
+    background: rgba( 255, 255, 255, 0.7 );
+    /*box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );*/
+    backdrop-filter: blur( 7.5px );
+    -webkit-backdrop-filter: blur( 7.5px );
+    border-radius: 0px 10px 10px 0px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    height: 68vh;
     overflow-x: auto;
     display: flex;
-    align-items: center;
+    /*align-items: center;*/
     justify-content: center;
     padding: 20px;
 }
 
+.days-cards-content title{
+
+}
+
+.days-cards-content .title h{
+    font-family: Monserrat-Regular;
+}
+
+/*Cards*/
+.card-shadow {
+    -webkit-box-shadow: -6px 6px 25px -1px rgba(0, 0, 0, 0.29);
+    -moz-box-shadow: -6px 6px 25px -1px rgba(0, 0, 0, 0.29);
+    box-shadow: -6px 6px 25px -1px rgba(0, 0, 0, 0.29);
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cards .card-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 265px;
+    height: 180px;
+    border: 0.8px solid #fff;
+}
+
+/*End cards*/
+
 /* Estilos responsivos para móviles y tablets */
 @media (max-width: 768px) {
+
     .sidebar {
-        width: 200px; /* Sidebar más estrecho en pantallas pequeñas */
+        height: 84vh;
+        width: 105px;
+    }
+    .days-cards-content {
+        height: 84vh;
+    }
+    .days-cards-content, .sidebar{
+        /*overflow-y: scroll;*/
+        scroll-behavior: smooth;
+        scrollbar-width: none;
     }
 
-    .days-cards-content {
-        margin-left: 200px;
-        width: calc(100% - 200px);
+    .sidebar ul {
+        margin-top: 0;
+    }
+
+    .sidebar ul li {
+        padding: 26px 12px;
     }
 }
