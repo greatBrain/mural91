@@ -15,24 +15,33 @@ app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
+# Root endpoint for user
 @app.get("/")
 async def get_mural(request: Request, session: Session = Depends(get_db)):
     activities = session.query(ActivityDataModel).all()
     activities_list = []
 
-    # Agrupa los servicios por dias, en un diccionario de listas
-    #activities_group = defaultdict(list)
+    # Agrupa los servicios por dias, en un diccionario
+    activities_group = defaultdict(list)
 
     for activity in activities:
-        '''activities_group[activity.day].append({
+        activities_group[activity.day].append({
             "title":activity.title,
-            "description":activity.description,
-            "day":activity.day
-            })'''
-        activities_list.append(activity)
+            "description":activity.description
+            })
+    activities_dict = dict(activities_group)
 
-    #activities_dict = dict(activities_group)
-    return templates.TemplateResponse("user/mural.html", {"request": request, "activities_list": activities_list})
+    #return {"activities":activities_dict}
+    return templates.TemplateResponse("user/mural.html", {"request": request, "activities":activities_dict})
+
+
+# endpoint to serve the activities data. A JS will fetch it from client side.
+@app.get("/api/getActivities")
+async def get_activities():
+      pass
+
+
+
 
 # Redirects to a login page:
 @app.get("/admin")
