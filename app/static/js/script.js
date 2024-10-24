@@ -1,11 +1,9 @@
-// Get data response from model
-
 document.addEventListener("DOMContentLoaded", function () {
     fetch('/api/activities')
         .then(response => response.json())
         .then(data => {
-            const activities = data.activities;
-            const activitiesContainer = document.getElementById("activities-container");
+            let activities = data.activities;
+            let activitiesContainer = document.getElementById("activities-container");
 
 
             for (let day in activities) {
