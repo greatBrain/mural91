@@ -17,33 +17,30 @@ templates = Jinja2Templates(directory="templates")
 
 # Root endpoint for user
 @app.get("/")
-async def get_mural(request: Request, session: Session = Depends(get_db)):
-    activities = session.query(ActivityDataModel).all()
-    activities_list = []
+async def root(request: Request):
+    # return templates.TemplateResponse("user/mural.html", {"request": request, "activities":activities_dict})
+    return templates.TemplateResponse({"request":request}, "user/mural.html")
 
-    # Agrupa los servicios por dias, en un diccionario
-    activities_group = defaultdict(list)
 
-    for activity in activities:
-        activities_group[activity.day].append({
+
+@app.get("/api/activities")
+async def get_activities(request: Request, session: Session = Depends(get_db)):
+     activities = session.query(ActivityDataModel).all()
+     activities_list = []
+
+     # Agrupa los servicios por dias, en un diccionario
+     activities_group = defaultdict(list)
+
+     for activity in activities:
+         activities_group[activity.day].append({
             "title":activity.title,
             "description":activity.description
             })
-    activities_dict = dict(activities_group)
-
-    #return {"activities":activities_dict}
-    return templates.TemplateResponse("user/mural.html", {"request": request, "activities":activities_dict})
-
-
-# endpoint to serve the activities data. A JS will fetch it from client side.
-@app.get("/api/getActivities")
-async def get_activities():
-      pass
+     activities_dict = dict(activities_group)
+     return {"activities":activities_dict}
 
 
 
-
-# Redirects to a login page:
 @app.get("/admin")
 async def get_admin_form(request: Request, session: Session = Depends(get_db)):
     return templates.TemplateResponse("admin/login.html", {"request": request})
