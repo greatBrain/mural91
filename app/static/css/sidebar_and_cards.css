@@ -100,33 +100,35 @@
     box-shadow: -1px 28px 36px -15px rgba(0, 0, 0, 0.18);
 }
 
-.card-monday {
+.card-Monday {
     background-image: linear-gradient(to left top, #d1c89d, #dbd288, #e2d67c, #cfc861, #d4d077);
     border: 0.8px solid #e5c62d;
 }
 
-.card-tuesday {
+.card-Tuesday {
     background-image: linear-gradient(to right top, #676044, #696140, #6b613b, #6d6237, #6f6232, #716432, #726533, #746733, #756a39, #776c3e, #786f44, #7a7149);
+    color: #fff;
 }
 
-.card-wednesday {
+.card-Wednesday {
     background-image: linear-gradient(to right top, #eea453, #eda354, #eca156, #eaa057, #e99f58, #eaa059, #eba15a, #eca25b, #f0a55c, #f4a95d, #f7ac5e, #fbb05f);
+    color: #fff;
 }
 
-.card-thursday {
+.card-Thursday {
     background-image: linear-gradient(to right top, #051937, #003e67, #00667c, #008d68, #34ae2f);
 }
 
-.card-friday {
+.card-Friday {
     background-image: linear-gradient(to right top, #0caa57, #01a860, #00a668, #02a36f, #0ea175, #14a178, #1aa17c, #20a17f, #21a481, #23a683, #24a986, #25ac88);
     color: #FFF;
 }
 
-.card-saturday {
+.card-Saturday {
     background-image: linear-gradient(to right top, #bb99ac, #bb99b6, #b79bc1, #af9dcd, #a1a1d9, #93abe6, #80b5f1, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
 }
 
-.card-sunday {
+.card-Sunday {
     background-image: linear-gradient(to right top, #206599, #1b6699, #176798, #126898, #0c6997, #126b9b, #186d9f, #1d6fa3, #2d73ad, #3c76b6, #4c79be, #5c7cc6);
     color: #FFF;
 }
@@ -134,9 +136,25 @@
 /*End cards*/
 
 /* Estilos responsivos para móviles y tablets */
+
+@media (min-width:769px) and (max-width:992px) {
+    header {
+        display: none;
+    }
+
+    #sidebar-and-cards-container {
+        margin-top: 10%;
+    }
+}
+
+
 @media (min-width: 401px) and (max-width: 768px) {
 
-    #sidebar-and-cards-container{
+    header {
+        display: none;
+    }
+
+    #sidebar-and-cards-container {
         margin-top: 15%;
     }
 
@@ -169,6 +187,10 @@
 }
 
 @media(min-width: 300px) and (max-width:400px) {
+    header {
+        display: none;
+    }
+
     .sidebar {
         height: auto;
         width: 85px;
