@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Verifica si activities[day] es un array
                 if (Array.isArray(activities[day])) {
                     activities[day].forEach(activity => {
-                        console.log(`Procesando actividad: ${activity.title}`); // Muestra la actividad que se está procesando
 
                         // Crea un nuevo div para cada tarjeta de actividad
                         let cardItem = document.createElement("div");
@@ -50,7 +49,10 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             // Hide all activities cards at first
-            const allCardsItems = document.querySelector(".card-item");
+            const CardsItems = document.querySelector(".card-item");
+            
+            const allCardsItems = Array.from(CardsItems);
+            console.log(allCardsItems);
 
             if (allCardsItems) {
                 allCardsItems.forEach(card => card.style.display = "none");
