@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Hide all activities cards at first
             const CardsItems = document.querySelector(".card-item");
-            
+
             const allCardsItems = Array.from(CardsItems);
             console.log(allCardsItems);
 

@@ -1,0 +1,38 @@
+.d-none {
+    display: none;
+}
+
+.card-item {
+    padding: 50px;
+    -webkit-box-shadow: 4px 7px 30px -14px rgba(0, 0, 0, 0.61);
+    -moz-box-shadow: 4px 7px 30px -14px rgba(0, 0, 0, 0.61);
+    box-shadow: 4px 7px 30px -14px rgba(0, 0, 0, 0.61);
+}
+
+.card-Monday {
+    background-color: #FAE8E0;
+}
+
+.card-Tuesday {
+    background-color: #EF7C8E;
+}
+
+.card-Wednesday {
+    background-color: #eeb333;
+}
+
+.card-Thursday {
+    background-color: #A0E7E5;
+}
+
+.card-Friday {
+    background-color: #B4F8C8;
+}
+
+.card-Saturday {
+    background-color: #D8A7B1;
+}
+
+.card-Sunday {
+    background-color: #29A0B1;
+}
